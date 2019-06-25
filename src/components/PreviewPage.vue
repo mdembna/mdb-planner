@@ -6,7 +6,7 @@
 
 <script>
 import mdbPlanner from "./mdbPlanner";
-const HelloWorld = {
+const PreviewPage = {
   components: {
     mdbPlanner
   },
@@ -43,7 +43,7 @@ const HelloWorld = {
   }
 };
 
-export default HelloWorld;
+export default PreviewPage;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

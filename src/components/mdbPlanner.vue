@@ -56,7 +56,6 @@ import {
   mdbBtn,
   mdbIcon,
   mdbTabs,
-  mdbCollapse,
   mdbInput,
   mdbRow,
   mdbCol
@@ -73,7 +72,6 @@ const mdbPlanner = {
     mdbCardTitle,
     mdbCardBody,
     mdbTabs,
-    mdbCollapse,
     mdbInput,
     mdbRow,
     mdbCol
