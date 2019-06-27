@@ -4,8 +4,14 @@
       <mdb-card-title>{{title}}</mdb-card-title>
     </mdb-card-header>
     <mdb-card-body>
-      <mdb-tabs class="text-uppercase" :links="tabs" default :active="0" :transition-duration="0.7"
-    transition-style="ease-out">
+      <mdb-tabs
+        class="text-uppercase"
+        :links="tabs"
+        default
+        :active="0"
+        :transition-duration="0.7"
+        transition-style="ease-out"
+      >
         <template v-for="(tab, index) in tabs" :slot="tab.text">
           <mdbListGroup class="mt-3" :key="index">
             <mdbListGroupItem v-for="(task, index) in taskList[tab.text]" :key="task.id">

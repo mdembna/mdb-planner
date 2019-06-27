@@ -1,9 +1,9 @@
 <template>
   <mdb-card class="planner-card">
-        <mdb-card-header>
-            <mdb-card-title>Our code will be here</mdb-card-title>
-        </mdb-card-header>
-        <mdb-card-body></mdb-card-body>
+    <mdb-card-header>
+      <mdb-card-title>Our code will be here</mdb-card-title>
+    </mdb-card-header>
+    <mdb-card-body></mdb-card-body>
   </mdb-card>
 </template>
 <script>
