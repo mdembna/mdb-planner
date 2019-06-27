@@ -1,6 +1,6 @@
 <template>
   <div class="container mb-5">
-    <mdb-planner :tasks="toDoList" color="elegant" />
+    <mdb-planner :tasks="toDoList" />
   </div>
 </template>
 
