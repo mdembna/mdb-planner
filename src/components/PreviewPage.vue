@@ -6,40 +6,46 @@
 
 <script>
 import mdbPlanner from "./mdbPlanner";
+import { db } from '../main';
+
 const PreviewPage = {
   components: {
     mdbPlanner
   },
   data() {
     return {
-      toDoList: {
-        monday: [
-          { title: "code", details: "learn how to use Vue.js", done: false },
-          { title: "homework", details: "mathematics and biology", done: true },
-          { title: "lunch", details: "lunch with friends", done: false }
-        ],
-        tuesday: [
-          { title: "shopping", details: "Buy new keyboard", done: false },
-          {
-            title: "lorem ipsum",
-            details: "learn how to use Vue.js",
-            done: false
-          }
-        ],
-        wednesday: [
-          { title: "code", details: "learn how to use Vue.js", done: false },
-          { title: "code", details: "learn how to use Vue.js", done: false },
-          { title: "code", details: "learn how to use Vue.js", done: false }
-        ],
-        thursday: [],
-        friday: [
-          { title: "code", details: "learn how to use Vue.js", done: false },
-          { title: "code", details: "learn how to use Vue.js", done: false }
-        ],
-        saturday: [],
-        sunday: []
-      }
+      monday: [],
+      tuesday: [],
+      wednesday: [],
+      thursday: [],
+      friday: [],
+      saturday: [],
+      sunday: []
     };
+  },
+  computed: {
+    toDoList() {
+      return {
+        monday: this.monday,
+        tuesday: this.tuesday,
+        wednesday: this.wednesday,
+        thursday: this.thursday,
+        friday: this.friday,
+        saturday: this.saturday,
+        sunday: this.sunday
+      }
+    }
+  },
+  firestore() {
+    return {
+      monday: db.collection('monday').orderBy('date', 'asc'),
+      tuesday: db.collection('tuesday').orderBy('date', 'asc'),
+      wednesday: db.collection('wednesday').orderBy('date', 'asc'),
+      thursday: db.collection('thursday').orderBy('date', 'asc'),
+      friday: db.collection('friday').orderBy('date', 'asc'),
+      saturday: db.collection('saturday').orderBy('date', 'asc'),
+      sunday: db.collection('sunday').orderBy('date', 'asc')
+    }
   }
 };
 
