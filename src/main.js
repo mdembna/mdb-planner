@@ -8,6 +8,21 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+import { firestorePlugin } from 'vuefire'
+Vue.use(firestorePlugin)
+
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+
+Vue.config.productionTip = false;
+var firebaseConfig = {
+  // YOUR FIREBASE CONFIG!
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+export const db = firebase.firestore()
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
